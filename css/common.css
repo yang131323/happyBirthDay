@@ -1,0 +1,10 @@
+.q_photo {
+    display: inline-block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+}

@@ -15,6 +15,8 @@
 | 项目名称 | 仓库地址 |
 |:--: | :-: |
 | Happy-birthDay | https://github.com/Junrui-L/Happy-birthDay |
+| happybirthday | https://github.com/shibobo/happybirthday |
+| canvas- | https://github.com/cunzher/canvas- |
 
 
 

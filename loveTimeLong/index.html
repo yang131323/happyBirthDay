@@ -101,10 +101,6 @@
 </p>
 <script src="../utils/url.js"></script>
 <script language="javascript">
-    var defDate = '1997/10/11 00:00:00';
-    var defName = 'Q';
-    var defPhoto = 'https://i.loli.net/2021/10/23/W4ZJKeQDPLjI3ub.png';
-
     /**
      * 展示倒计时：date来自url
      */
@@ -154,23 +150,15 @@
             showDateTime(new Date(defDate));
             return;
         }
-        var date = getUrlParam('date');
-        var photo = getUrlParam('img');
-        var name = getUrlParam('name');
-        var legalCharReg = /[a-zA-Z0-9=+\/]/;
-        var urlReg = /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-\(\)]*[\w@?^=%&/~+#-\(\)])?$/;
-        var urlDate = date ? decodeURIComponent(window.atob(date)) : defDate;
-        var urlPhoto = photo && legalCharReg.test(window.atob(photo)) ? decodeURIComponent(window.atob(photo)) : defPhoto;
-        var urlName = name ? decodeURIComponent(window.atob(name)) : defName;
-        var showDate = new Date(urlDate);
-        var showPhoto = urlReg.test(urlPhoto) ? urlPhoto.replace(/^https?:/, '') : '';
-        var showName = `${urlName}，`;
+        var urlObj = getNameDateAndPhoto()
+        showDateTime(urlObj.date)
+        var showName = `${urlObj.name}，`;
         showDateTime(showDate);
-        if (showPhoto) {
+        if (urlObj.photo) {
             var imgDom = document.getElementById('logo');
             imgDom.src = showPhoto;
         }
-        if (urlName) {
+        if (showName) {
             lover.innerHTML = showName;
         }
     }
