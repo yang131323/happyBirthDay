@@ -1,6 +1,6 @@
 var defDate = '1997/10/11 00:00:00';
 var defName = 'Q';
-var defPhoto = 'https://i.loli.net/2021/10/23/W4ZJKeQDPLjI3ub.png';
+var defPhoto = '//i.loli.net/2021/10/23/W4ZJKeQDPLjI3ub.png';
 
 /** test: name=JUU1JUI3JUE3JUU1JUI3JUE3&date=MjAyMSUyRjEwJTJGMjIlMjAxMCUzQTAwJTNBMDA=&img=aHR0cHMlM0ElMkYlMkZzMy5qcGcuY20lMkYyMDIxJTJGMTAlMkYyMyUyRklnU21FZS5qcGc= */
 function getUrlParam (key) {

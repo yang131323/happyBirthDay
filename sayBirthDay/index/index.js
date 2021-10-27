@@ -10,7 +10,7 @@ var S = {
         if (i !== -1) {
             S.UI.simulate(decodeURI(action).substring(i + 3));
         } else {
-            S.UI.simulate('Hi XXX|祝你|生日快乐|happy everyday|#countdown 3||');
+            S.UI.simulate('Hi Q|祝你|生日快乐|happy everyday|#countdown 3||');
         }
 
         S.Drawing.loop(function () {
@@ -18,7 +18,7 @@ var S = {
             S.Shape.render();
             //console.log(m);
             if (m == 700) {
-                window.location.href = 'BirthdayCake.html';
+                window.location.href = '../cake/birthdayCake.html';
             }
         });
     },

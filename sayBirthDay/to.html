@@ -6,12 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday to xxx</title>
 <link rel="stylesheet" type="text/css" href="./to.css">
+<link rel="stylesheet" href="../css/common.css">
 </head>
 <body>
+<img src="//i.loli.net/2021/10/23/W4ZJKeQDPLjI3ub.png" alt="myLove" name="" class="q_photo" id="myLover">
 <div class="htmleaf-container">
 	<div class="wrapper">
 		<div class="container">
-			<h1>Happy birthday to you,xxx</h1>
+			<h1 id="greeting">Happy birthday to you, Q</h1>
 			
 			<form class="form">
 				<input id="userName" name="userName" type="text" placeholder="Name">
@@ -49,6 +51,21 @@
 </div>
 
 <script src="//cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-<audio src="./Anesthesia.mp4" autoplay="autoplay" loop="loop"></audio>
+<script>
+	$('#login-button').click(function (event) {
+	var userName=document.getElementById("userName").value;  
+    var pwd=document.getElementById("pwd").value;
+    if(userName=="520" &&  pwd=="520"){
+		event.preventDefault();
+		$('form').fadeOut(500);
+		$('.wrapper').addClass('form-success');
+		setTimeout(function(){location.href="./index/index.html";},2000);
+	}
+	else{
+		alert("错误！!!");
+	}
+});
+</script>
+<audio src="../music/Anesthesia.mp4" autoplay="autoplay" loop="loop"></audio>
 </body>
 </html>
