@@ -19,7 +19,7 @@ function getNameDateAndPhoto () {
     var photo = getUrlParam('img');
     var name = getUrlParam('name');
     var legalCharReg = /[a-zA-Z0-9=+\/]/;
-    var urlReg = /^(((ht|f)tps?):\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-\(\)]*[\w@?^=%&/~+#-\(\)])?$/;
+    var urlReg = /^(((?:(ht|f)tps?):)?\/\/)?[\w-]+(\.[\w-]+)+([\w.,@?^=%&:/~+#-\(\)]*[\w@?^=%&/~+#-\(\)])?$/;
     var urlDate = date && legalCharReg.test(date) ? decodeURIComponent(window.atob(date)) : defDate;
     var urlPhoto = photo && legalCharReg.test(photo) ? decodeURIComponent(window.atob(photo)) : defPhoto;
     var urlName = name && legalCharReg.test(name) ? decodeURIComponent(window.atob(name)) : defName;
